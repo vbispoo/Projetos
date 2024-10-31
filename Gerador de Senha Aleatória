@@ -7,7 +7,7 @@ import string #Traz informação dos caracteres: string.ascii_letters (Letras ma
 def gerar_senha(comprimento):
     caracteres = string.ascii_letters + string.digits + string.punctuation
     senha = ''.join(random.choice(caracteres) for i in range(comprimento)) 
-    return senha #ESSA LINHA DEVE ESTAR ESCRITO "RETUR N" (COM O N JUNTAMENTE AS DEMAIS LETRAS DA PRALAVRA) - O GIT ESTÁ TRADUZINDO QUANDO ESCREVO A PALAVRA EM INGLÊS.  
+    return senha
 #JOIN é ligação(juntar). RANDOM é para trazer os caracteres misturados. FOR I IN range(comprimento) é para repetir e trazer a quantidade de caracter informado na linha 12
 
 comprimento_desejado = int(9) #Essa linha está difinindo a quantidade de caractere que vai ter na senha que será gerada.
