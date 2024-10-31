@@ -1,0 +1,15 @@
+#GERADOR DE SENHAS ALEATORIAS.
+
+import random #Função para pegar informações aleatorias.
+import string #Traz informação dos caracteres: string.ascii_letters (Letras maiusculas e minusculas) string.digits (Numeros) string.punctuation (Caracteres especiais)
+
+#DEF é a palvra chave para definir uma função.
+def gerar_senha(comprimento):
+    caracteres = string.ascii_letters + string.digits + string.punctuation
+    senha = ''.join(random.choice(caracteres) for i in range(comprimento)) 
+    return senha
+#JOIN é ligação(juntar). RANDOM é para trazer os caracteres misturados. FOR I IN range(comprimento) é para repetir e trazer a quantidade de caracter informado na linha 12
+
+comprimento_desejado = int(9) #Essa linha está difinindo a quantidade de caractere que vai ter na senha que será gerada.
+senha_gerada = gerar_senha(comprimento_desejado)#Aqui está armazenando o valor retornado no código.
+print("Sua nova senha é:", senha_gerada)#Essa ultima linha faz a impressão do código 
